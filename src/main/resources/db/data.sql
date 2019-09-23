@@ -5,4 +5,6 @@ INSERT INTO `user` (id, username, password, role) VALUES ('4', 'user2', '1234', 
 INSERT INTO `user` (id, username, password, role) VALUES ('5', 'user3', '1234', 'user');
 INSERT INTO `user` (id, username, password, role) VALUES ('6', 'user4', '1234', 'user');
 
+
+INSERT INTO `music` (songname, singer, album) VALUES ('寻', '华晨宇', '寻');
 COMMIT;
