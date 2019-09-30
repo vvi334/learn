@@ -1,43 +1,42 @@
 package edu.hubu.learn.web;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.hubu.learn.entity.User;
 import edu.hubu.learn.service.UserService;
-import edu.hubu.learn.entity.Music;
-import edu.hubu.learn.service.MusicService;
+
 
 
 @Controller
-@RequestMapping("/")
-public class IndexController {
+@RequestMapping("/user")
+public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private MusicService musicService;
-
-    @RequestMapping("/music")
-    public ModelAndView music() {
+    @RequestMapping("/{id}")
+    public ModelAndView user(@PathVariable Long id) {
         ModelAndView mav = new ModelAndView();
-        Music music = musicService.getMusic(1l);
-        mav.addObject("music", music);
-        mav.setViewName("music");
+        User user = userService.getUser(id);
+        mav.addObject("user", user);
+        mav.setViewName("user");
         return mav;
     }
 
-    @RequestMapping("/")
-    public ModelAndView index() {
+    @RequestMapping("/list")
+    public ModelAndView users() {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("index");
+        List<User> users= userService.getUsers();
+        mav.addObject("users", users);
+        mav.setViewName("users");
         return mav;
     }
 
-   
-   
     
 }
