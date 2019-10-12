@@ -1,5 +1,7 @@
 package edu.hubu.learn.service;
 import java.util.List;
+
+import org.omg.PortableInterceptor.USER_EXCEPTION;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,8 @@ public class UserService {
 
     public List<User> getUsers(){
         return userDao.findAll();
+    }
+    public User addUser(User user){
+        return userDao.save(user);
     }
 }

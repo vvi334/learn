@@ -17,23 +17,22 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
   </head>
-<body>
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">列表</a></li>
-  <li role="presentation"><a href="/user/add">增加</a></li>
-  <li role="presentation"><a href="#">搜索</a></li>
-</ul>
-<table class="table table-hover">
-<tr>
-<td>名称</td><td>密码</td>
-</tr>
-<#list users as users>
-<tr>
-<td>${users.username}</td><td>${users.password}</td>
-</tr>
-</#list>
-</table>
-<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+  <body>
+    <form action="/user/do_add">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
+            </div>
+            <button type="submit" class="btn btn-default">确认</button>
+        </form>
+
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
   </body>
