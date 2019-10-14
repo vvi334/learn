@@ -25,4 +25,10 @@ public class UserService {
     public User addUser(User user){
         return userDao.save(user);
     }
+    public void modifyUser(User user){
+         userDao.save(user);
+    }
+    public void deleteUser(Long id){
+        userDao.deleteById(id);
+   }
 }

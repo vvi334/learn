@@ -17,27 +17,19 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
   </head>
-<body>
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">列表</a></li>
+  <body>
+  <ul class="nav nav-tabs">
+  <li role="presentation"><a href="/user/list">列表</a></li>
   <li role="presentation"><a href="/user/add">增加</a></li>
-
-  <li role="presentation"><a href="/user/search">搜索</a></li>
+  
+  <li role="presentation" class="active"><a href="#">搜索</a></li>
 </ul>
-<table class="table table-hover">
-<tr>
-<td>名称</td><td>密码</td><td>删除</td><td>修改</td>
-</tr>
-<#list users as users>
-<tr>
-<td>${users.username}</td><td>${users.password}</td>
-<td><a href="/user/delete/${users.id}">删除</a></td>
- <td><a href="/user/modify/${users.id}">修改</a></td>
-</tr>
-</#list>
-</table>
-<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<form action="/user/do_search">
+    <form class="form-search">
+  <input type="text" class="input-medium search-query">
+  <button type="submit" class="btn">查找</button>
+</form>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

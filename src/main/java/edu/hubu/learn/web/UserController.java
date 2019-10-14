@@ -29,6 +29,29 @@ public class UserController {
         return mav;
     }
 
+    @RequestMapping("/modify/{id}")
+    public ModelAndView modifyUser(@PathVariable Long id) {
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("user", userService.getUser(id));
+        mav.setViewName("user_modify");
+        return mav;
+    }
+
+    @RequestMapping("/do_modify")
+    public ModelAndView doModifyUser(User user) {
+        user.setAvatar("");
+        userService.modifyUser(user);
+        ModelAndView mav = new ModelAndView("redirect:/user/list");
+        return mav;
+    }
+
+    @RequestMapping("/delete/{id}")
+    public ModelAndView delete(@PathVariable Long id) {
+       userService.deleteUser(id);
+        ModelAndView mav = new ModelAndView("redirect:/user/list");
+        return mav;
+    }
+
     @RequestMapping("/list")
     public ModelAndView users() {
         ModelAndView mav = new ModelAndView();
@@ -45,6 +68,13 @@ public class UserController {
         return mav;
     }
 
+    @RequestMapping("/search")
+    public ModelAndView searchUser() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("user_search");
+        return mav;
+    }
+
     @RequestMapping("/do_add")
     public ModelAndView doAddUser(User user) {
         user.setAvatar("");
@@ -52,5 +82,7 @@ public class UserController {
         ModelAndView mav = new ModelAndView("redirect:/user/list");
         return mav;
     }
+
+   
 
 }

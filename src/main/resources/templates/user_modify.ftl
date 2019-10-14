@@ -20,18 +20,19 @@
   <body>
   <ul class="nav nav-tabs">
   <li role="presentation"><a href="/user/list">列表</a></li>
-  <li role="presentation" class="active"><a href="/user/add">增加</a></li>
-
+  <li role="presentation"><a href="/user/add">增加</a></li>
+    <li role="presentation" class="active"><a href="/user/modify">修改</a></li>
   <li role="presentation"><a href="/user/search">搜索</a></li>
 </ul>
-    <form action="/user/do_add">
+    <form action="/user/do_modify">
+    <input type="hidden" class="form-control" id="id" name="id" value="${user.id}" >
             <div class="form-group">
                 <label for="username">用户名</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
+                <input type="text" class="form-control" id="username" name="username" value="${user.username}" placeholder="请输入用户名">
             </div>
             <div class="form-group">
                 <label for="password">密码</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
+                <input type="password" class="form-control" id="password" name="password" value="${user.password}" placeholder="请输入密码">
             </div>
             <button type="submit" class="btn btn-default">确认</button>
         </form>
