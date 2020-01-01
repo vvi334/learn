@@ -17,25 +17,27 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
   </head>
-<body>
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">列表</a></li>
-  <li role="presentation"><a href="/user/add">增加</a></li>
-
-  <li role="presentation"><a href="/user/search">搜索</a></li>
+  <body style="background-image: linear-gradient(to right,#ee9ca7,#a7bfe8);">
+  <div>
+  <ul class="breadcrumb" style="background-color:white;opacity:0.4;">
+    <li><a href="/study/add">增加</a></li>
+    <li><a href="/study/search">返回</a></li>
 </ul>
-<table class="table table-hover">
-<tr>
-<td>名称</td><td>密码</td><td>删除</td><td>修改</td>
-</tr>
-<#list users as users>
-<tr>
-<td>${users.username}</td><td>${users.password}</td>
-<td><a href="/user/delete/${users.id}">删除</a></td>
- <td><a href="/user/modify/${users.id}">修改</a></td>
-</tr>
-</#list>
-</table>
+<div style="margin-left:150px;width:1000px;background-color:white;opacity:0.4;box-shadow: 10px 10px 5px #888888;">
+       <table class="table table-hover">
+        <tr>
+           <td>教室</td><td>时间</td><td>删除</td><td>修改</td>
+        </tr>
+         <#list studys as studys>
+        <tr>
+          <td>${studys.classroom}</td><td>${studys.time}</td>
+          <td><a href="/study/delete/${studys.id}">删除</a></td>
+          <td><a href="/study/modify/${studys.id}">修改</a></td>
+        </tr>
+        </#list>
+        </table>
+       
+       </div>
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>

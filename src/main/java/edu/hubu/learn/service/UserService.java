@@ -15,20 +15,7 @@ public class UserService {
     @Autowired
     private UserDao userDao;
 
-    public User getUser(Long id) {
-        return userDao.findById(id).get();
-    }
-
-    public List<User> getUsers(){
-        return userDao.findAll();
-    }
     public User addUser(User user){
         return userDao.save(user);
     }
-    public void modifyUser(User user){
-         userDao.save(user);
-    }
-    public void deleteUser(Long id){
-        userDao.deleteById(id);
-   }
 }

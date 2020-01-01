@@ -17,18 +17,21 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-  <ul class="nav nav-tabs">
-  <li role="presentation"><a href="/user/list">列表</a></li>
-  <li role="presentation"><a href="/user/add">增加</a></li>
-  
-  <li role="presentation" class="active"><a href="#">搜索</a></li>
-</ul>
-<form action="/user/do_search">
+  <body style="background-image: linear-gradient(to right,#ee9ca7,#a7bfe8);">
+  <div style="margin-left:350px;margin-top:200px;">
+<form action="/study/do_search">
+<div style="margin-left:110px;padding-top:50px;">
+<h1 style="color:#6600FF;opacity:0.4;font-family: myFirstFont;
+	src: url('Sansation_Light.ttf')
+		,url('Sansation_Light.eot');">输入星期查询可自习教室</h1>
+</div>
+<div style="margin-top:50px;">
     <form class="form-search">
-  <input type="text" class="input-medium search-query">
-  <button type="submit" class="btn">查找</button>
+  <input type="week" class="input-medium search-query" style=" width:600px;height:50px;border-radius: 25px;border-color:#6600FF;">
+  <button type="submit" class="btn"><img src="../img/sousou.png" ></button>
+  </div>
 </form>
+</div>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>

@@ -4,17 +4,20 @@ import javax.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "music")
+@Table(name = "study")
 @Data
-public class Music {
+public class Study {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private String songname;
+    private String classroom;
 
-    private String singer;
+    private String week;
 
-    private String album;
+    private String time;
+
+	public void setAvatar(String string) {
+	}
 }
