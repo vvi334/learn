@@ -2,6 +2,8 @@ package edu.hubu.learn.web;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,5 +39,16 @@ public class UserController {
         ModelAndView mav = new ModelAndView("redirect:/study/search");
         return mav;
     }
-    
+
+    @RequestMapping("/login")
+        public String login(HttpServletRequest request){
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+            User user = UserDao.findByUsernameAndPassword(username,password);
+            if(user !=null) {
+                return "/study/search";
+            }else{
+            return"/";
+        }
+}
 }

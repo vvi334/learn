@@ -38,7 +38,7 @@
                 </div>
                 <button class="btn btn-back js-btn" data-target="welcome"><i class="fas fa-angle-left"></i></button>
             </div>
-        <form action="/login/{username}/{password}">
+        <form action="/login">
             <div class="card border-0 shadow card--login" id="login">
                 <div class="card-body">
                     <h2 class="card-title">欢迎登录！</h2>

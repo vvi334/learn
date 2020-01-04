@@ -11,7 +11,7 @@ CREATE TABLE `user` (
 );
 ALTER TABLE `user` ADD UNIQUE (`username`);
 ALTER TABLE `user` ADD UNIQUE (`email`);
-ALTER TABLE `user` ADD UNIQUE (`phone`);
+
 
 DROP TABLE IF EXISTS `study`;
 CREATE TABLE  `study` (
