@@ -23,7 +23,7 @@
     <li><a href="/study/add">增加</a></li>
     <li><a href="/study/search">返回</a></li>
 </ul>
-<div style="margin-left:400px;margin-top:100px;background-color:white;opacity:0.4;box-shadow: 10px 10px 5px #888888;">
+<div style="margin-left:400px;margin-top:100px;width:500px;background-color:white;opacity:0.4;box-shadow: 10px 10px 5px #888888;">
     <form action="/study/do_modify">
     <input type="hidden" class="form-control" id="id" name="id" value="${study.id}" >
             <div class="input-group input-group-lg" style="width:300px;margin-left:100px;padding-top:40px;">

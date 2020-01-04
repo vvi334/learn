@@ -20,7 +20,7 @@
   <body style="background-image: linear-gradient(to right,#ee9ca7,#a7bfe8);">
   <div>
   <ul class="breadcrumb" style="background-color:white;opacity:0.4;">
-    <<li><a href="/study/add">增加</a></li>
+    <li><a href="/study/add">增加</a></li>
     <li><a href="/study/search">返回</a></li>
 </ul>
 <div style="width:500px;height:300px;margin-left:400px;margin-top:100px;background-color:white;opacity:0.4;box-shadow: 10px 10px 5px #888888;">

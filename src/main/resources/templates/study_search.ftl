@@ -28,7 +28,7 @@
 <div style="margin-top:50px;">
     <form class="form-search">
   <input type="week" class="input-medium search-query" style=" width:600px;height:50px;border-radius: 25px;border-color:#6600FF;">
-  <button type="submit" class="btn"><img src="../img/sousou.png" ></button>
+  <button type="submit" class="btn">搜索</button>
   </div>
 </form>
 </div>
