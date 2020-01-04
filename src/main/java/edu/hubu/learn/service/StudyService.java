@@ -29,9 +29,9 @@ public class StudyService {
         return studyDao.findAll(new Sort(Direction.DESC, "id"));
     }
 
-    public List<Study> searchStudys(String keyword) {
+    public List<Study> searchStudys(String week) {
         Study study = new Study();
-        study.setClassroom(keyword);
+        study.setClassroom(week);
         ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("classroom", match->match.contains());
         Example<Study> example = Example.of(study, matcher);
         Sort sort = new Sort(Direction.DESC, "id");

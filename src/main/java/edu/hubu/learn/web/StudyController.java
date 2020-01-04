@@ -61,8 +61,8 @@ public class StudyController {
     @RequestMapping("/do_search")
     public ModelAndView doSearchUser(HttpServletRequest httpRequest) {
         ModelAndView mav = new ModelAndView();
-        String keyword = httpRequest.getParameter("keyword");
-        List<Study> studys = studyService.searchStudys(keyword);
+        String week = httpRequest.getParameter("week");
+        List<Study> studys = studyService.searchStudys(week);
         mav.addObject("studys", studys);
         mav.setViewName("study_result");
         return mav;
